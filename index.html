@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav {
+            background: #333;
+            color: white;
+            padding: 0.5rem;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        main {
+            display: flex;
+            margin: 1rem;
+        }
+
+        article {
+            flex: 3;
+            margin-right: 1rem;
+        }
+
+        aside {
+            flex: 1;
+            background: #f4f4f4;
+            padding: 1rem;
+        }
+
+        section {
+            margin-bottom: 1rem;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        form {
+            margin-top: 1rem;
+        }
+
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>Welcome to My Web Page</h1>
+        <p>Your one-stop destination for all things web!</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+    
+        <article>
+            <section id="home">
+                <h2>Home</h2>
+                <p>This is the homepage where you can find the latest updates.</p>
+                <img src="https://via.placeholder.com/600x300" alt="Sample Image">
+            </section>
+
+            <section id="about">
+                <h2>About Us</h2>
+                <p>Learn more about what we do and our mission to make the web a better place.</p>
+            </section>
+
+            <section id="contact">
+                <h2>Contact Us</h2>
+                <form action="#" method="post">
+                    <fieldset>
+                        <legend>Contact Information</legend>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required><br><br>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required><br><br>
+
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required><br><br>
+
+                        <label for="message">Message:</label><br>
+                        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+
+                        <label for="options">Choose an option:</label>
+                        <select id="options" name="options">
+                            <option value="feedback">Feedback</option>
+                            <option value="query">Query</option>
+                            <option value="other">Other</option>
+                        </select><br><br>
+
+                        <button type="submit">Submit</button>
+                    </fieldset>
+                </form>
+            </section>
+        </article>
+        <aside>
+            <h3>Related Links</h3>
+            <ul>
+                <li><a href="#">HTML5 Guide</a></li>
+                <li><a href="#">CSS Basics</a></li>
+                <li><a href="#">Web Development Resources</a></li>
+            </ul>
+        </aside>
+    </main>
+</body>
+</html>
