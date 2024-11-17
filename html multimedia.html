@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore the Solar System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Explore the Solar System</h1>
+        <p>A multimedia journey through the planets</p>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- SVG Graphics -->
+        <section class="svg-section">
+            <h2>Solar System Layout</h2>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+                <!-- Sun -->
+                <circle cx="400" cy="200" r="50" fill="orange" />
+                <text x="390" y="210" font-size="12" fill="white">Sun</text>
+
+                <!-- Planets -->
+                <circle cx="150" cy="200" r="10" fill="gray" />
+                <text x="140" y="190" font-size="10" fill="white">Mercury</text>
+
+                <circle cx="250" cy="200" r="20" fill="yellow" />
+                <text x="230" y="190" font-size="10" fill="white">Venus</text>
+
+                <circle cx="350" cy="200" r="30" fill="blue" />
+                <text x="340" y="190" font-size="10" fill="white">Earth</text>
+
+                <circle cx="500" cy="200" r="25" fill="red" />
+                <text x="490" y="190" font-size="10" fill="white">Mars</text>
+
+                <!-- Orbit Paths -->
+                <circle cx="400" cy="200" r="150" fill="none" stroke="white" />
+                <circle cx="400" cy="200" r="250" fill="none" stroke="white" />
+                <circle cx="400" cy="200" r="350" fill="none" stroke="white" />
+            </svg>
+        </section>
+
+        <!-- Multimedia Section -->
+        <section class="media-section">
+            <h2>Learn About the Planets</h2>
+
+            <!-- Video -->
+            <video controls>
+                <source src="Data/3508495595-preview.mp4" type="video/mp4">
+                <source src="solar_system.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+
+            <!-- Audio -->
+            <h3>Background Narration</h3>
+            <audio controls>
+                <source src="Data/deep-space-adventure-sci-fi-orchestra-1258.mp3" type="audio/mpeg">
+                <source src="planet_info.ogg" type="audio/ogg">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+
+        <!-- Interactive Canvas -->
+        <section>
+            <h2>Interactive Planet Simulation</h2>
+            <canvas id="solarCanvas" width="600" height="400"></canvas>
+        </section>
+    </div>
+
+    <!-- YouTube Video -->
+    <iframe width="315" height="560" src="https://www.youtube.com/embed/vQJez9iiS7Y" title="how solar system really moves #shorts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Solar System Explorer | Designed for Education</p>
+    </footer>
+
+    <!-- JavaScript for Canvas -->
+    <script>
+        const canvas = document.getElementById('solarCanvas');
+        const ctx = canvas.getContext('2d');
+
+        let angle = 0;
+
+        function drawPlanet(x, y, size, color) {
+            ctx.beginPath();
+            ctx.arc(x, y, size, 0, Math.PI * 2);
+            ctx.fillStyle = color;
+            ctx.fill();
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Draw Sun
+            drawPlanet(300, 200, 40, 'orange');
+
+            // Orbiting Planet
+            const planetX = 300 + Math.cos(angle) * 100;
+            const planetY = 200 + Math.sin(angle) * 100;
+            drawPlanet(planetX, planetY, 20, 'blue');
+
+            angle += 0.02;
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+    </script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e2f;
+    color: white;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: white;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #dcdcdc;
+}
+
+/* Container */
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* SVG Section */
+.svg-section {
+    margin: 30px 0;
+}
+
+.svg-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+svg {
+    max-width: 90%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Multimedia Section */
+.media-section {
+    margin: 40px 0;
+}
+
+.media-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+video, audio {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Canvas Section */
+canvas {
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 20px auto;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer Styles */
+footer {
+    background: #2a2a40;
+    color: #dcdcdc;
+    padding: 10px;
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    svg {
+        max-width: 100%;
+    }
+
+    video, audio {
+        width: 90%;
+    }
+}
