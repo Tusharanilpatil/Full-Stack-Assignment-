@@ -1,4 +1,4 @@
-/* General Styles */
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -9,7 +9,6 @@ body {
     line-height: 1.6;
 }
 
-/* Header Styles */
 header {
     background: linear-gradient(to right, #1e3c72, #2a5298);
     padding: 20px 0;
@@ -28,14 +27,14 @@ header p {
     color: #dcdcdc;
 }
 
-/* Container */
+
 .container {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* SVG Section */
+
 .svg-section {
     margin: 30px 0;
 }
@@ -53,7 +52,6 @@ svg {
     display: block;
 }
 
-/* Multimedia Section */
 .media-section {
     margin: 40px 0;
 }
@@ -72,7 +70,6 @@ video, audio {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
-/* Canvas Section */
 canvas {
     border: 2px solid white;
     border-radius: 10px;
@@ -81,7 +78,6 @@ canvas {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-/* Footer Styles */
 footer {
     background: #2a2a40;
     color: #dcdcdc;
@@ -103,7 +99,6 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Responsiveness */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2rem;
